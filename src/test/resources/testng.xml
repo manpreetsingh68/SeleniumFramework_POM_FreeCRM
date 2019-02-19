@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="FreeCRM Test Suite" thread-count="3" parallel="false">
+
+	<listeners>
+		<listener class-name="com.freecrm.framework.utils.ExtentReporterNG"></listener>
+	</listeners>
+	<test name="Free CRM Test">
+		<classes>
+			<class name="com.freecrm.framework.testcases.LoginPageTest" />
+			<class name="com.freecrm.framework.testcases.HomePageTest" />
+			<!--  class name="com.freecrm.framework.testcases.CompaniesTest" /> -->
+		</classes>
+	</test>
+</suite>
