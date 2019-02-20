@@ -8,8 +8,8 @@
 	<test name="Free CRM Test">
 		<classes>
 			<class name="com.freecrm.framework.testcases.LoginPageTest" />
-			<class name="com.freecrm.framework.testcases.HomePageTest" />
-			<!--  class name="com.freecrm.framework.testcases.CompaniesTest" /> -->
+			<class name="com.freecrm.framework.testcases.HomePageTest" /> 
+			<!--  class name="com.freecrm.framework.testcases.CompaniesTest" /> --> 
 		</classes>
 	</test>
 </suite>

@@ -32,7 +32,7 @@ public class CompaniesCreatePage extends BaseTest {
 	@FindBy(xpath = "//select[@name='status']")
 	private WebElement select_Status;
 
-	@FindBy(xpath = "//form[@id='companyForm']//preceding-sibling::input[@value='Save']")
+	@FindBy(xpath = "//legend[contains(text(),'Create New  Company')]/..//preceding-sibling::input[@value='Save']")
 	private WebElement btn_Save;
 	
 	

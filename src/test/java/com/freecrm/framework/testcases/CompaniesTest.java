@@ -62,7 +62,7 @@ public class CompaniesTest extends BaseTest {
 		return data;
 	}
 	
-	@Test(priority=4)
+	@Test(priority=4, dataProvider="getCompanyData")
 	public void test004_fillNewCompanyForm(String company, String industry, String noOfEmps, String status) {
 		companiesCreatePage.createNewCompany(company, industry, noOfEmps, status);
 	}
