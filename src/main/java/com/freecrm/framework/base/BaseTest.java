@@ -47,10 +47,10 @@ public class BaseTest {
 			driver = new FirefoxDriver();
 		}
 
-		/*eDriver = new EventFiringWebDriver(driver);
+		eDriver = new EventFiringWebDriver(driver);
 		eventListener = new WebEventListener();
 		eDriver.register(eventListener);
-		driver = eDriver; */
+		driver = eDriver; 
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
