@@ -17,7 +17,7 @@ import org.openqa.selenium.TakesScreenshot;
 import com.freecrm.framework.base.BaseTest;
 
 public class TestUtil extends BaseTest {
-	private static final String TEST_DATA_SHEET_PATH = "C:\\Users\\masingh\\Documents\\SeleniumLearning2019\\com.freecrm.framework\\FreeCRMTestDataSheet.xlsx";
+	private static final String TEST_DATA_SHEET_PATH = "C:\\Users\\Manpreet\\workspace\\SeleniumFramework_POM_FreeCRM\\FreeCRMTestDataSheet.xlsx";
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 10;
 	public static Workbook book;
