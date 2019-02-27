@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-FreeCRM_Test_Suite">
-              <span class="suite-name border-passed">FreeCRM Test Suite</span>
+              <span class="suite-name border-failed">FreeCRM Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-FreeCRM_Test_Suite" class="hide-methods failed suite-FreeCRM_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-FreeCRM_Test_Suite -->
+                      <a href="#" panel-name="suite-FreeCRM_Test_Suite" class="show-methods failed suite-FreeCRM_Test_Suite"> (show)</a> <!-- show-methods failed suite-FreeCRM_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-FreeCRM_Test_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FreeCRM_Test_Suite" title="com.freecrm.framework.testcases.ContactsTest" hash-for-method="test001_fillNewContactsForm(test, Manpreet, Singh, Infosys Pvt. Ltd.)">test001_fillNewContactsForm(test, Manpreet, Singh, Infosys Pvt. Ltd.)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-FreeCRM_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,17 +116,17 @@
                     <div class="method-list-content passed suite-FreeCRM_Test_Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FreeCRM_Test_Suite" title="com.freecrm.framework.testcases.LoginPageTest" hash-for-method="loginPageLogoTest">loginPageLogoTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-FreeCRM_Test_Suite" title="com.freecrm.framework.testcases.ContactsTest" hash-for-method="test001_fillNewContactsForm(Mr., Asheen, Antony, Cognizant Technology Solutions Pvt. Ltd.)">test001_fillNewContactsForm(Mr., Asheen, Antony, Cognizant Technology Solutions Pvt. Ltd.)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FreeCRM_Test_Suite" title="com.freecrm.framework.testcases.LoginPageTest" hash-for-method="loginPageTitleTest">loginPageTitleTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-FreeCRM_Test_Suite" title="com.freecrm.framework.testcases.ContactsTest" hash-for-method="test001_fillNewContactsForm(Dr., Gunit, Thapar, Mediaocean Asia Pvt. Ltd.)">test001_fillNewContactsForm(Dr., Gunit, Thapar, Mediaocean Asia Pvt. Ltd.)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FreeCRM_Test_Suite" title="com.freecrm.framework.testcases.LoginPageTest" hash-for-method="loginToCRMTest">loginToCRMTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-FreeCRM_Test_Suite" title="com.freecrm.framework.testcases.ContactsTest" hash-for-method="test001_fillNewContactsForm(Dr., Rahul, Varma, Limestone Pvt. Ltd.)">test001_fillNewContactsForm(Dr., Rahul, Varma, Limestone Pvt. Ltd.)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-FreeCRM_Test_Suite -->
@@ -127,31 +141,60 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-FreeCRM_Test_Suite" class="panel FreeCRM_Test_Suite">
-          <div class="suite-FreeCRM_Test_Suite-class-passed">
+          <div class="suite-FreeCRM_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.freecrm.framework.testcases.LoginPageTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.freecrm.framework.testcases.ContactsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginPageLogoTest">
-                  </a> <!-- loginPageLogoTest -->
-                  <span class="method-name">loginPageLogoTest</span>
+                  <a name="test001_fillNewContactsForm(test, Manpreet, Singh, Infosys Pvt. Ltd.)">
+                  </a> <!-- test001_fillNewContactsForm(test, Manpreet, Singh, Infosys Pvt. Ltd.) -->
+                  <span class="method-name">test001_fillNewContactsForm</span>
+                  <span class="parameters">(test, Manpreet, Singh, Infosys Pvt. Ltd.)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate element with text: test
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;unknown&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;MANPREET&apos;, ip: &apos;192.168.1.11&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at com.freecrm.framework.pageobjects.ContactsCreatePage.createNewContact(ContactsCreatePage.java:59)
+	at com.freecrm.framework.testcases.ContactsTest.test001_fillNewContactsForm(ContactsTest.java:96)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FreeCRM_Test_Suite-class-failed -->
+          <div class="suite-FreeCRM_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.freecrm.framework.testcases.ContactsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test001_fillNewContactsForm(Mr., Asheen, Antony, Cognizant Technology Solutions Pvt. Ltd.)">
+                  </a> <!-- test001_fillNewContactsForm(Mr., Asheen, Antony, Cognizant Technology Solutions Pvt. Ltd.) -->
+                  <span class="method-name">test001_fillNewContactsForm</span>
+                  <span class="parameters">(Mr., Asheen, Antony, Cognizant Technology Solutions Pvt. Ltd.)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginPageTitleTest">
-                  </a> <!-- loginPageTitleTest -->
-                  <span class="method-name">loginPageTitleTest</span>
+                  <a name="test001_fillNewContactsForm(Dr., Gunit, Thapar, Mediaocean Asia Pvt. Ltd.)">
+                  </a> <!-- test001_fillNewContactsForm(Dr., Gunit, Thapar, Mediaocean Asia Pvt. Ltd.) -->
+                  <span class="method-name">test001_fillNewContactsForm</span>
+                  <span class="parameters">(Dr., Gunit, Thapar, Mediaocean Asia Pvt. Ltd.)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginToCRMTest">
-                  </a> <!-- loginToCRMTest -->
-                  <span class="method-name">loginToCRMTest</span>
+                  <a name="test001_fillNewContactsForm(Dr., Rahul, Varma, Limestone Pvt. Ltd.)">
+                  </a> <!-- test001_fillNewContactsForm(Dr., Rahul, Varma, Limestone Pvt. Ltd.) -->
+                  <span class="method-name">test001_fillNewContactsForm</span>
+                  <span class="parameters">(Dr., Rahul, Varma, Limestone Pvt. Ltd.)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -171,7 +214,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;3&quot; name=&quot;Free CRM Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.freecrm.framework.testcases.LoginPageTest&quot;/&gt;
+      &lt;class name=&quot;com.freecrm.framework.testcases.ContactsTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Free CRM Test --&gt;
 &lt;/suite&gt; &lt;!-- FreeCRM Test Suite --&gt;
@@ -211,24 +254,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginToCRMTest')
-data.setCell(0, 2, 'com.freecrm.framework.testcases.LoginPageTest')
-data.setCell(0, 3, 13140);
+data.setCell(0, 1, 'test001_fillNewContactsForm')
+data.setCell(0, 2, 'com.freecrm.framework.testcases.ContactsTest')
+data.setCell(0, 3, 30530);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginPageLogoTest')
-data.setCell(1, 2, 'com.freecrm.framework.testcases.LoginPageTest')
-data.setCell(1, 3, 68);
+data.setCell(1, 1, 'test001_fillNewContactsForm')
+data.setCell(1, 2, 'com.freecrm.framework.testcases.ContactsTest')
+data.setCell(1, 3, 25993);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'loginPageTitleTest')
-data.setCell(2, 2, 'com.freecrm.framework.testcases.LoginPageTest')
-data.setCell(2, 3, 25);
+data.setCell(2, 1, 'test001_fillNewContactsForm')
+data.setCell(2, 2, 'com.freecrm.framework.testcases.ContactsTest')
+data.setCell(2, 3, 25052);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'test001_fillNewContactsForm')
+data.setCell(3, 2, 'com.freecrm.framework.testcases.ContactsTest')
+data.setCell(3, 3, 23307);
 window.suiteTableData['FreeCRM_Test_Suite']= { tableData: data, tableDiv: 'times-div-FreeCRM_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-FreeCRM_Test_Suite">
               </div> <!-- times-div-FreeCRM_Test_Suite -->
             </div> <!-- times-div -->
@@ -254,43 +301,65 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.freecrm.framework.testcases.LoginPageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
+              <div class="chronological-class-name">com.freecrm.framework.testcases.ContactsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setExtentReport</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">856 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginPageTitleTest</span>
-                <span class="method-start">12812 ms</span>
+                <span class="method-name">test001_fillNewContactsForm(Dr., Gunit, Thapar, Mediaocean Asia Pvt. Ltd.)</span>
+                <span class="method-start">13142 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">12840 ms</span>
+                <span class="method-name">tearDown([TestResult name=test001_fillNewContactsForm status=SUCCESS method=ContactsTest.test001_fillNewConta...)</span>
+                <span class="method-start">38197 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">13531 ms</span>
+                <span class="method-start">38937 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginPageLogoTest</span>
-                <span class="method-start">25890 ms</span>
+                <span class="method-name">test001_fillNewContactsForm(Mr., Asheen, Antony, Cognizant Technology Solutions Pvt. Ltd.)</span>
+                <span class="method-start">52220 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">25960 ms</span>
+                <span class="method-name">tearDown([TestResult name=test001_fillNewContactsForm status=SUCCESS method=ContactsTest.test001_fillNewConta...)</span>
+                <span class="method-start">75528 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">26624 ms</span>
+                <span class="method-start">76258 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginToCRMTest</span>
-                <span class="method-start">37828 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test001_fillNewContactsForm(test, Manpreet, Singh, Infosys Pvt. Ltd.)</span>
+                <span class="method-start">90454 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">50969 ms</span>
+                <span class="method-name">tearDown([TestResult name=test001_fillNewContactsForm status=FAILURE method=ContactsTest.test001_fillNewConta...)</span>
+                <span class="method-start">120987 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">122294 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test001_fillNewContactsForm(Dr., Rahul, Varma, Limestone Pvt. Ltd.)</span>
+                <span class="method-start">132505 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=test001_fillNewContactsForm status=SUCCESS method=ContactsTest.test001_fillNewConta...)</span>
+                <span class="method-start">158499 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">endExtentReport</span>
+                <span class="method-start">159200 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

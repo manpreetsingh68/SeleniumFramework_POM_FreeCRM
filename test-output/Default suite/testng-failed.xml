@@ -6,7 +6,9 @@
       <class name="com.freecrm.framework.testcases.ContactsTest">
         <methods>
           <include name="setUp"/>
-          <include name="test001_fillNewContactsForm" invocation-numbers="0 1 2"/>
+          <include name="test001_fillNewContactsForm"/>
+          <include name="setExtentReport"/>
+          <include name="endExtentReport"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.freecrm.framework.testcases.ContactsTest -->

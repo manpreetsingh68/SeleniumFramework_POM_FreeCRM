@@ -17,7 +17,6 @@ import org.openqa.selenium.TakesScreenshot;
 import com.freecrm.framework.base.BaseTest;
 
 public class TestUtil extends BaseTest {
-	private static final String TEST_DATA_SHEET_PATH = "C:\\Users\\Manpreet\\workspace\\SeleniumFramework_POM_FreeCRM\\FreeCRMTestDataSheet.xlsx";
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 10;
 	public static Workbook book;
@@ -30,7 +29,7 @@ public class TestUtil extends BaseTest {
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream fis = null;
 		try {
-			fis = new FileInputStream(TEST_DATA_SHEET_PATH);
+			fis = new FileInputStream(prop.getProperty("TEST_DATA_SHEET_PATH"));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
