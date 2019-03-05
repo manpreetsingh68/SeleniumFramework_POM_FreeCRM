@@ -4,6 +4,7 @@
 
 	<listeners>
 		<listener class-name="com.freecrm.framework.utils.ExtentReporterNG"></listener>
+		<listener class-name="com.freecrm.framework.utils.AnnotationTransformer"></listener>
 	</listeners>
 	<test name="Free CRM Test">
 		<classes>
