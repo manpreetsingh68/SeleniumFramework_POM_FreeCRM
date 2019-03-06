@@ -37,12 +37,10 @@ public class BaseTest {
 	public static void initialize() {
 		String browserName = prop.getProperty("browser");
 		if (browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\Manpreet\\Downloads\\Selenium\\Drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", prop.getProperty("CHROME_DRIVER_PATH"));
 			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\Manpreet\\Downloads\\Selenium\\Drivers\\geckodriver.exe");
+			System.setProperty("webdriver.chrome.driver", prop.getProperty("FIREFOX_DRIVER_PATH"));
 			driver = new FirefoxDriver();
 		}
 
