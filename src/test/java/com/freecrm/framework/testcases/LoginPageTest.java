@@ -1,5 +1,7 @@
 package com.freecrm.framework.testcases;
 
+import java.net.MalformedURLException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -8,6 +10,7 @@ import org.testng.annotations.Test;
 import com.freecrm.framework.base.BaseTest;
 import com.freecrm.framework.pageobjects.HomePage;
 import com.freecrm.framework.pageobjects.LoginPage;
+import com.freecrm.framework.utils.MyScreenRecorder;
 import com.freecrm.framework.utils.TestUtil;
 
 public class LoginPageTest extends BaseTest {
@@ -21,7 +24,7 @@ public class LoginPageTest extends BaseTest {
 	}
 
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws MalformedURLException {
 		initialize();
 		loginPage = new LoginPage();
 		testUtil = new TestUtil();
@@ -41,10 +44,14 @@ public class LoginPageTest extends BaseTest {
 	}
 
 	@Test(priority = 3)
-	public void loginToCRMTest() {
+	public void loginToCRMTest() throws Exception {
+		MyScreenRecorder.startRecording("LoginToCRM");
+		
 		homePage = loginPage.loginToCRM(prop.getProperty("username"), prop.getProperty("password"));
 		testUtil.switchToPageiFrame("mainpanel");
 		Assert.assertTrue(homePage.isAtHomePage());
+		
+		MyScreenRecorder.stopRecording();
 	}
 
 	@AfterMethod

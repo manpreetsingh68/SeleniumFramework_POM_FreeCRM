@@ -1,5 +1,7 @@
 package com.freecrm.framework.testcases;
 
+import java.net.MalformedURLException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -21,7 +23,7 @@ public class HomePageTest extends BaseTest {
 	}
 
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws MalformedURLException {
 		initialize();
 		loginPage = new LoginPage();
 		homePage = new HomePage();

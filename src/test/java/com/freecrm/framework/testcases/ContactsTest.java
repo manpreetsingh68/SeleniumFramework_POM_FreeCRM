@@ -2,6 +2,7 @@ package com.freecrm.framework.testcases;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -72,7 +73,7 @@ public class ContactsTest extends BaseTest {
 	}
 
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws MalformedURLException {
 		initialize();
 		loginPage = new LoginPage();
 		homePage = new HomePage();

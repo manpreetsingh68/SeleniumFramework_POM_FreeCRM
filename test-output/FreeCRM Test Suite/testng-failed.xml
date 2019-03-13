@@ -7,15 +7,14 @@
   </listeners>
   <test thread-count="3" name="Free CRM Test(failed)">
     <classes>
-      <class name="com.freecrm.framework.testcases.ContactsTest">
+      <class name="com.freecrm.framework.testcases.LoginPageTest">
         <methods>
-          <include name="setUp"/>
-          <include name="test001_fillNewContactsForm" invocation-numbers="2 2 2 2"/>
-          <include name="setExtentReport"/>
-          <include name="endExtentReport"/>
+          <include name="loginToCRMTest"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="loginPageLogoTest"/>
         </methods>
-      </class> <!-- com.freecrm.framework.testcases.ContactsTest -->
+      </class> <!-- com.freecrm.framework.testcases.LoginPageTest -->
     </classes>
   </test> <!-- Free CRM Test(failed) -->
 </suite> <!-- Failed suite [FreeCRM Test Suite] -->
